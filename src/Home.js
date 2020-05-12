@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Image, Button} from 'react-bootstrap';
+import { Link} from "react-router-dom";
 import $ from 'jquery';
 
 function Home(props) {
@@ -24,15 +25,15 @@ function Home(props) {
         <p>Remember to check out our Instagram <a href="https://www.instagram.com/machine_learning_architecture/?hl=en" target="blank">@machine_learning_architecture</a> for more exploration we did in this course!
         </p> */}
         <div className="bl-lk-holder">
-          <a href="https://quirky-jang-bf77d5.netlify.app/dataset">
+          <a href="/dataset">
             <Image className="thumbnail-sub"
                 src={require('./images/ds-tb.png')}
             /></a>
-          <a href="https://quirky-jang-bf77d5.netlify.app/model">
+          <a href="/model">
             <Image className="thumbnail-sub"
                 src={require('./images/md-tb.png')}
             /></a>
-          <a href="https://quirky-jang-bf77d5.netlify.app/project">
+          <a href="/project">
             <Image className="thumbnail-sub"
                 src={require('./images/pj-tb.png')}
             /></a>
