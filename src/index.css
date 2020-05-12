@@ -185,3 +185,7 @@ body,html {
 .workflow-sect:hover {
   cursor: pointer;
 }
+
+h3 {
+  margin-bottom: 20px;
+}

@@ -152,10 +152,13 @@ class Model extends React.Component {
             <div>
                 <Container className="gallery-container">
                     <hr />
+                    <h3>Pix2Pix: the General Advesarial Network(GAN) model we chose</h3>
                     {imgrowwf}
                     <hr />
+                    <h3>Test 1: random images we fed into the model</h3>
                     {imgrow1}
                     <hr />
+                    <h3>Test 2: we made a .gif animation</h3>
                     <Image
                         src={require('./images/model/test2gif/1.gif')}
                         className="border border-white gif-item"

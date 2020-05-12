@@ -33,7 +33,7 @@ function Home(props) {
             <Image className="thumbnail-sub"
                 src={require('./images/md-tb.png')}
             /></a>
-          <a href="/project">
+          <a href="/results">
             <Image className="thumbnail-sub"
                 src={require('./images/pj-tb.png')}
             /></a>

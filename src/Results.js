@@ -32,7 +32,7 @@ const modelsrclist = ["https://www.vectary.com/viewer/v1/?model=034c92c6-6cd1-4d
     "https://www.vectary.com/viewer/v1/?model=7d6f61ea-5b09-45f2-b2f8-298a23f10c59&env=studio3"]
 
 
-class Project extends React.Component {
+class Results extends React.Component {
     constructor(props){
         super(props);
 
@@ -179,4 +179,4 @@ class Project extends React.Component {
     }
 }
 
-export default Project;
+export default Results;

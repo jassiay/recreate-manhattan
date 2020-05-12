@@ -2,7 +2,7 @@ import React from 'react';
 import Home from './Home';
 import About from './About';
 import Model from './Model';
-import Project from './Project';
+import Results from './Results';
 import Dataset from './Dataset';
 import InteractiveModel from './InteractiveModel';
 import { BrowserRouter as Router, Switch, Route, NavLink} from "react-router-dom";
@@ -20,7 +20,7 @@ function App() {
         <Nav className="ml-auto">
           <NavLink className="nav-link" activeClassName="active" to="/dataset">Dataset</NavLink>
           <NavLink className="nav-link" activeClassName="active" to="/model">Model</NavLink>
-          <NavLink className="nav-link" activeClassName="active" to="/project">Project</NavLink>
+          <NavLink className="nav-link" activeClassName="active" to="/results">Results</NavLink>
           <NavLink className="nav-link" activeClassName="active" to="/about">About</NavLink>
         </Nav>
       </Navbar.Collapse>
@@ -31,7 +31,7 @@ function App() {
         <Route path="/about" render={(props) => <About {...props} />} />
         <Route path="/dataset" render={(props) => <Dataset {...props} />} />
         <Route path="/model" render={(props) => <Model {...props} />} />
-        <Route path="/project" render={(props) => <Project {...props} />} />
+        <Route path="/results" render={(props) => <Results {...props} />} />
         <Route path="/" render={(props) => <Home {...props} />} />
       </Switch>
     </Container>
