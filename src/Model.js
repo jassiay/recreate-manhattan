@@ -114,7 +114,7 @@ class Model extends React.Component {
 
         var imageset = imagesetworkflow.concat(imageset1).concat(imageset2);
 
-        console.log(imageset)
+        // console.log(imageset);
 
         var classType = "border border-white img-item";
         var displaymodelbuttonclass = "notdisplaymodel-class";

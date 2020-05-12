@@ -119,7 +119,7 @@ class Results extends React.Component {
               classType += " progress-2";
             }
 
-            console.log(filenames.fname.length)
+            // console.log(filenames.fname.length);
 
             return <Image
             key = {idx}
