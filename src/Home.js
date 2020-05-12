@@ -24,15 +24,15 @@ function Home(props) {
         <p>Remember to check out our Instagram <a href="https://www.instagram.com/machine_learning_architecture/?hl=en" target="blank">@machine_learning_architecture</a> for more exploration we did in this course!
         </p> */}
         <div className="bl-lk-holder">
-          <a href="./dataset">
+          <a href="https://quirky-jang-bf77d5.netlify.app/dataset">
             <Image className="thumbnail-sub"
                 src={require('./images/ds-tb.png')}
             /></a>
-          <a href="./model">
+          <a href="https://quirky-jang-bf77d5.netlify.app/model">
             <Image className="thumbnail-sub"
                 src={require('./images/md-tb.png')}
             /></a>
-          <a href="./project">
+          <a href="https://quirky-jang-bf77d5.netlify.app/project">
             <Image className="thumbnail-sub"
                 src={require('./images/pj-tb.png')}
             /></a>
