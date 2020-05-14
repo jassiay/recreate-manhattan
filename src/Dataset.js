@@ -62,11 +62,6 @@ class Dataset extends React.Component {
         this.checkModelExist = this.checkModelExist.bind(this);
     }
 
-    componentDidMount() {
-        window.scrollTo(0, 0);
-    }
-
-
     checkModelExist(idx, idxlist) {
         if (idxlist.includes(idx)) {
             return true;
@@ -174,7 +169,7 @@ class Dataset extends React.Component {
                         onClick={this.switchDataMode.bind(this, 'dpmp')}
                     />
                     {dsimgrow}
-                    <a href="https://github.com/jassiay/recreate-manhattan/tree/master/dataset" target="blank">
+                    <a href="https://github.com/jassiay/manhattan-recreate/tree/master/dataset" target="blank">
                         <Image
                             src={require('./images/downloadset.png')}
                             className="border border-white img-item"
