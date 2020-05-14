@@ -18,12 +18,6 @@ function Home(props) {
           /> 
         </div>
         <hr />
-        {/* <h3>About This Project</h3>
-        <p>This website is a students' final presentation of <b>The Cooper Union's 
-          Machine Learning+Architecture Studio/Independent Study</b> in Fall 2020.
-        </p>
-        <p>Remember to check out our Instagram <a href="https://www.instagram.com/machine_learning_architecture/?hl=en" target="blank">@machine_learning_architecture</a> for more exploration we did in this course!
-        </p> */}
         <div className="bl-lk-holder">
           <a href="/dataset">
             <Image className="thumbnail-sub"
