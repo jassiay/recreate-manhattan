@@ -34,8 +34,17 @@ function App() {
         <Route path="/results" render={(props) => <Results {...props} />} />
         <Route path="/" render={(props) => <Home {...props} />} />
       </Switch>
+
     </Container>
+    <Footer />
   </Router>
+  );
+}
+
+function Footer() {
+  return (
+    <div className="footerbox">Hosted on Netlify - Website by Jing Jiang
+    </div>
   );
 }
 

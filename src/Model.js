@@ -173,7 +173,6 @@ class Model extends React.Component {
                     />
                     {imgrow2}
 
-                    <hr />
                 </Container>
 
 

@@ -146,7 +146,6 @@ class Results extends React.Component {
                     </iframe>
                     </div>
                     {imgrow2}
-                    <hr />
                 </Container>
 
 

@@ -176,7 +176,6 @@ class Dataset extends React.Component {
                         />
                     </a>
 
-                    <hr />
                 </Container>
 
 

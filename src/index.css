@@ -158,10 +158,9 @@ body,html {
 }
 
 .thumbnail-sub {
-  height: 360px;
-  width: 360px;
+  width: 33.33%;
   display: inline-block;
-  height: 360px;
+  /* height: 360px; */
   border: solid 1px;
   border-color: grey;
 }
@@ -199,4 +198,25 @@ h3 {
   color: #212529;
   background-color: orange;
   border-color: orange;
+}
+
+.footerbox {
+  font-size: 0.4rem;
+  color:rgb(180, 180, 180);
+  text-align: center;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem; 
+}
+
+
+#root {
+  position: relative;
+  min-height: 100vh;
+}
+
+.container {
+  padding-bottom: 2rem;
 }
