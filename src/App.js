@@ -11,7 +11,7 @@ import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap';
 
 function App() {
   return (
-    <Router className="router">
+    <Router className="router" basename={`${process.env.PUBLIC_URL}/`}>
     <Container>
       <Navbar collapseOnSelect expand="lg" className="nav-bar-custom">
       <Navbar.Brand className="brand-custom" href="/">Recreate-Manhattan</Navbar.Brand>
