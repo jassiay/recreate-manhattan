@@ -11,10 +11,10 @@ import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap';
 
 function App() {
   return (
-    <Router className="router" basename={`${process.env.PUBLIC_URL}/`}>
+    <Router className="router">
     <Container>
       <Navbar collapseOnSelect expand="lg" className="nav-bar-custom">
-      <Navbar.Brand className="brand-custom" href="/">Recreate-Manhattan</Navbar.Brand>
+      <Navbar.Brand className="brand-custom" href="./">Recreate-Manhattan</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
