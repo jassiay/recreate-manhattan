@@ -57,6 +57,10 @@ class Model extends React.Component {
         this.checkModelExist = this.checkModelExist.bind(this);
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     checkModelExist(idx, idxlist) {
         if (idxlist.includes(idx)) {
             return true;
