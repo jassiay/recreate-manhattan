@@ -21,7 +21,7 @@ function About() {
         <p>&#127911; Matthew Chan (Irwin S. Chanin School of Architecture)</p>
         <p>&#127929; Jing Jiang (Albert Nerken School of Engineering)</p>
         <h3>Dataset Download</h3>
-        <p>Download our 3x400 Footprint2Depth dataset <a href="https://github.com/jassiay/manhattan-recreate/tree/master/dataset" target="blank"> here</a>.</p>
+        <p>Download our 3x400 Footprint2Depth dataset <a href="https://github.com/jassiay/recreate-manhattan/tree/master/dataset" target="blank"> here</a>.</p>
         <h3>References</h3>
         <p>Pix2Pix project website: <a href="https://phillipi.github.io/pix2pix/" target="blank">https://phillipi.github.io/pix2pix/</a></p>
         <p>Pix2Pix implementation repo we used: <a href="https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix" target="blank">https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix</a></p>

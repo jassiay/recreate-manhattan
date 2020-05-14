@@ -169,7 +169,7 @@ class Dataset extends React.Component {
                         onClick={this.switchDataMode.bind(this, 'dpmp')}
                     />
                     {dsimgrow}
-                    <a href="https://github.com/jassiay/manhattan-recreate/tree/master/dataset" target="blank">
+                    <a href="https://github.com/jassiay/recreate-manhattan/tree/master/dataset" target="blank">
                         <Image
                             src={require('./images/downloadset.png')}
                             className="border border-white img-item"
