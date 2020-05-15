@@ -191,13 +191,13 @@ h3 {
 }
 
 .border-warning {
-  border-color: orangered!important;
+  border-color: coral!important;
 }
 
 .btn-warning {
   color: #212529;
-  background-color: orangered;
-  border-color: orangered;
+  background-color: coral;
+  border-color: coral;
 }
 
 .footerbox {
