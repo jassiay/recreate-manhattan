@@ -163,7 +163,7 @@ class Model extends React.Component {
                     image-to-image translation. We trained two mappings using our dataset. 
                     The first one is <b>buidling-footprint-to-depth model</b>, which translates the footprints with building inlines to depth maps.
                     The second one is <b>block-footprint-to-depth model</b>, which translates the block-outline-only footprints to depth maps. 
-                    We trained each model for 100 epochs using default Pix2Pix architecture and hyperparams.</p>
+                    We trained each model for 100 epochs.</p>
 
                     <br className="hide-text" />
                     {imgrowwf}
