@@ -55,6 +55,11 @@ class Model extends React.Component {
         this.selectClickFn = this.selectClickFn.bind(this);
         this.constructFilelist = this.constructFilelist.bind(this);
         this.checkModelExist = this.checkModelExist.bind(this);
+        this.hideText = this.hideText.bind(this);
+    }
+
+    hideText() {
+        $(".hide-text").toggle();
     }
 
     checkModelExist(idx, idxlist) {
@@ -95,7 +100,6 @@ class Model extends React.Component {
     }
 
     selectClickFn(actiontype, imgidx) {
-        // console.log(imgidx)
         if (actiontype == 0) { //Type 0: open lightbox normally
             this.setState({ 
                 isOpen: true, 
@@ -152,13 +156,42 @@ class Model extends React.Component {
             <div>
                 <Container className="gallery-container">
                     <hr />
-                    <h3>Pix2Pix: the General Advesarial Network(GAN) model we chose</h3>
+                    <h3 className="hide-text">Deep Learning Model</h3>
+                    <p className="hide-text">We chose <a href="https://phillipi.github.io/pix2pix/" target="blank"><b>Pix2Pix</b></a> as 
+                    our Deep Learning model. Pix2Pix
+                    has a conditional General Adversarial Networks architecture that enables 
+                    image-to-image translation. We trained two mappings using our dataset. 
+                    The first one is <b>buidling-footprint-to-depth model</b>, which translates the footprints with building inlines to depth maps.
+                    The second one is <b>block-footprint-to-depth model</b>, which translates the block-outline-only footprints to depth maps. 
+                    We trained each model for 100 epochs using default Pix2Pix architecture and hyperparams.</p>
+
+                    <br className="hide-text" />
                     {imgrowwf}
                     <hr />
-                    <h3>Test 1: random images we fed into the model</h3>
+                    
+                    <h3 className="hide-text">Test Input 1</h3>
+                    <p className="hide-text">After training the model, we first tested it with some 
+                    random images we drawn. We found that the model produced relatively good results
+                    when we drew closed-line shapes at the center of the image. For open-line shapes and lines at the
+                    edge of the input, the model produced relatively unorganized distribution of greyscale on the infered depth maps. 
+                    This behavior was expected, since it corresponds with the characteristics of our dataset.</p>
+                    <p className="hide-text"> The gallery below shows some of the examples in our Test 1. All depth maps in Test 1 were
+                        infered using the buidling-footprint-to-depth model. We built 3D models for some of the data for showcase, which are indicated with  
+                        <span className="text-color-border"> colored borders</span>.
+                     You can play with them by clicking at "Play with 3D model" button after clicking the images. </p>
+
+                    <br className="hide-text" />
                     {imgrow1}
                     <hr />
-                    <h3>Test 2: we made a .gif animation</h3>
+                    <h3 className="hide-text">Test Input 2</h3>
+                    <p className="hide-text">We built a small animation to show the transition between the open-line
+                    shapes and closed-line shapes, and their corresponding inference using our models. The 
+                    inference on the left used the buidling-footprint-to-depth model, while the inference on the right
+                    used the block-footprint-to-depth model. 
+                    We used abstract shapes to test the models so the results would not look like city blocks, but the abstract inputs in a way
+                    better shows the difference of the behaviors of the two models.</p>
+
+                    <br className="hide-text" />
                     <Image
                         src={require('./images/model/test2gif/1.gif')}
                         className="border border-white gif-item"
@@ -172,6 +205,11 @@ class Model extends React.Component {
                         className="border border-white gif-item"
                     />
                     {imgrow2}
+                    <Image
+                        src={require('./images/hidetext.png')}
+                        className="border border-white img-item"
+                        onClick={this.hideText.bind()}
+                    /> 
 
                 </Container>
 

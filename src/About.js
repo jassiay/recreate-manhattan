@@ -5,7 +5,7 @@ import $ from 'jquery';
 function About() {
   return (
     <div>
-      <Container>
+      <Container className="gallery-container">
         <hr />
         <h3>About This Project</h3>
         <p>This website is a students' final presentation of <b>The Cooper Union's 
@@ -26,6 +26,9 @@ function About() {
         <p>Pix2Pix project website: <a href="https://phillipi.github.io/pix2pix/" target="blank">https://phillipi.github.io/pix2pix/</a></p>
         <p>Pix2Pix implementation repo we used: <a href="https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix" target="blank">https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix</a></p>
         <p>Curated our dataset based on: <a href="https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-nyc-3d-model-download.page" target="blank">https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-nyc-3d-model-download.page</a></p>
+
+
+        
       </Container>
     </div>
   );

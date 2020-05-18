@@ -6,12 +6,10 @@ import { Container, Row, Col, Image, Button} from 'react-bootstrap';
 import InteractiveModel from './InteractiveModel'
 import $ from 'jquery';
 
-const overviewlist = require.context("./images/datasetfirst100/overview", true, /^\.\/.*\.png$/);
 const buidingfplist = require.context("./images/datasetfirst100/buildingfootprint", true, /^\.\/.*\.png$/);
 const blockfplist = require.context("./images/datasetfirst100/blockfootprint", true, /^\.\/.*\.png$/);
 const depthmaplist = require.context("./images/datasetfirst100/depthmap", true, /^\.\/.*\.png$/);
 
-// const imagesov = overviewlist.keys();
 const imagesov = [
     {fname: 'datasetfirst100/overview/overview1.png', hasmodel: 0},
     {fname: 'datasetfirst100/overview/overview2.png', hasmodel: 0},
@@ -60,6 +58,7 @@ class Dataset extends React.Component {
         this.constructFilelist = this.constructFilelist.bind(this);
         this.switchDataMode = this.switchDataMode.bind(this);
         this.checkModelExist = this.checkModelExist.bind(this);
+        this.hideText = this.hideText.bind(this);
     }
 
     checkModelExist(idx, idxlist) {
@@ -93,6 +92,10 @@ class Dataset extends React.Component {
         }
         
         return filelist;
+    }
+
+    hideText() {
+        $(".hide-text").toggle();
     }
 
     selectClickFn(actiontype, imgidx) {
@@ -152,6 +155,20 @@ class Dataset extends React.Component {
             <div>
                 <Container className="gallery-container">
                     <hr />
+                    <h3 className="hide-text">Dataset Description</h3>
+                    <p className="hide-text">Our dataset consists of 3 
+                        groups, each has 400 images. Each image contains information of the top-view footprint of a block in Manhattan. Group 1 is the footprint with 
+                        building inlines. Group 2 is the footprint with block outline only.
+                        Group 3 is the greyscale depth maps of the block. The greyscale denotes the height 
+                        of the buildings. The lighter the color is, the taller the building will be.</p>
+                    <p className="hide-text">The first 4 images of the gallery below give an overview of the relationship between 
+                        the 3 groups of the dataset. The following 3 buttons toggle between the content shown
+                        on this page about each groups of our dataset. After the buttons, 100 examples of the
+                        dataset is shown. We built 3D models for some of the data for showcase, which are indicated with  
+                        <span className="text-color-border"> colored borders</span>. You can play with them by clicking at "Play with 3D model" button after clicking the images.
+                         You can also download the full dataset at the bottom of this page.</p>
+
+                    <br className="hide-text" />
                     {overviewimgrow}
                     <Image
                         src={require('./images/bufp.png')}
@@ -175,6 +192,11 @@ class Dataset extends React.Component {
                             className="border border-white img-item"
                         />
                     </a>
+                    <Image
+                        src={require('./images/hidetext.png')}
+                        className="border border-white img-item"
+                        onClick={this.hideText.bind()}
+                    /> 
 
                 </Container>
 

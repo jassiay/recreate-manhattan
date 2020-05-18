@@ -9,7 +9,7 @@ function Home(props) {
 
   return (
     <div>
-      <Container>
+      <Container className="gallery-container">
         <hr />
         <div className="thumbnail-holder">
           <h3 className="thumbnail-text">Recreate-Manhattan: <br/>Reimagine a City using Deep Learning</h3>

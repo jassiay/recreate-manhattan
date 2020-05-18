@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  width: 100vw;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
@@ -219,4 +223,10 @@ h3 {
 
 .container {
   padding-bottom: 2rem;
+
+}
+
+.text-color-border {
+  color: coral;
+  font-weight: 700;
 }

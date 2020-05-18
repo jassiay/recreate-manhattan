@@ -46,6 +46,7 @@ class Results extends React.Component {
         this.selectClickFn = this.selectClickFn.bind(this);
         this.constructFilelist = this.constructFilelist.bind(this);
         this.checkModelExist = this.checkModelExist.bind(this);
+        this.hideText = this.hideText.bind(this);
     }
 
     checkModelExist(idx, idxlist) {
@@ -79,6 +80,12 @@ class Results extends React.Component {
         
         return filelist;
     }
+
+
+    hideText() {
+        $(".hide-text").toggle();
+    }
+
 
     selectClickFn(actiontype, imgidx) {
         // console.log(imgidx)
@@ -137,15 +144,39 @@ class Results extends React.Component {
             <div>
                 <Container className="gallery-container">
                     <hr />
+                    <h3 className="hide-text">We Built a New Manhattan!</h3>
+                    <p className="hide-text">We drew 151 block-like images as our input, and order them to create 
+                    a footprint for a city, as shown at the left side of the second row. After the model infered their depth maps, we ordered them in the same way. Thus, a 
+                    depth map for a city was created, as shown at the right side of the second row. From that, we rendered our <b>New Manhattan.</b></p>
+
+                    <br className="hide-text" />
                     {overviewimgrow}
-                    {/* <hr /> */}
+                    <hr className="hide-text" />
+                    <h3 className="hide-text">A Community in the City</h3>
+                    <p className="hide-text">We made a 3D model playground for a small community in our machine-learned city.</p>
+
+                    <br className="hide-text" />
                     <div>
                     <iframe className="result-model" title="communityexample" id="739b8415-3703-4394-83cd-fb394f6465f8"
                       src="https://www.vectary.com/viewer/v1/?model=739b8415-3703-4394-83cd-fb394f6465f8&env=studio3" 
                       frameBorder="0">
                     </iframe>
                     </div>
+                    <hr className="hide-text"/>
+                    <h3 className="hide-text">Some Blocks in the City</h3>
+                    <p className="hide-text">The gallery below shows the inputs and their corresponding depth map outputs
+                    for the blocks we re-drew. We used the results from the block-footprint-to-depth model to re-construct our city. We built 
+                    3D models for some of the data for showcase, which are indicated with  
+                        <span className="text-color-border"> colored borders</span>.
+                     You can play with them by clicking at "Play with 3D model" button after clicking the images.</p>
+
+                    <br className="hide-text" />
                     {imgrow2}
+                    <Image
+                        src={require('./images/hidetext.png')}
+                        className="border border-white img-item"
+                        onClick={this.hideText.bind()}
+                    /> 
                 </Container>
 
 
